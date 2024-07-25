@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>World Bank - Financial Transaction</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      .navbar {
+        background-color: green;
+        padding: 10px;
+        color: white;
+      }
+      .container {
+        margin: auto;
+        width: 50%;
+        padding: 20px;
+      }
+      .btn {
+        background-color: green;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background-color: darkgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <h1>World Bank</h1>
+    </div>
+    <div class="container">
+      <h2>Enter Transaction Details</h2>
+      <form action="{{ url_for('transaction') }}" method="post">
+        <label for="sender">Sender Name:</label><br>
+        <input type="text" id="sender" name="sender"><br><br>
+        <label for="receiver">Receiver Name:</label><br>
+        <input type="text" id="receiver" name="receiver"><br><br>
+        <label for="amount">Amount:</label><br>
+        <input type="number" id="amount" name="amount"><br><br>
+        <label for="remarks">Remarks:</label><br>
+        <input type="text" id="remarks" name="remarks"><br><br>
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>World Bank - Transaction Details</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      .navbar {
+        background-color: green;
+        padding: 10px;
+        color: white;
+      }
+      .container {
+        margin: auto;
+        width: 50%;
+        padding: 20px;
+      }
+      .btn {
+        background-color: green;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background-color: darkgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <h1>World Bank</h1>
+    </div>
+    <div class="container">
+      <h2>Transaction Details</h2>
+      <p>Sender: {{ sender }}</p>
+      <p>Receiver: {{ receiver }}</p>
+      <p>Amount: {{ amount }}</p>
+      <p>Remarks: {{ remarks }}</p>
+      <p>Date and Time: {{ date_time }}</p>
+      <p>Reference Number: {{ reference_number }}</p>
+      <p>Transaction ID: {{ transaction_id }}</p>
+      <a href="{{ url_for('index') }}"><button class="btn">Make another transaction</button></a>
+    </div>
+  </body>
+</html>
